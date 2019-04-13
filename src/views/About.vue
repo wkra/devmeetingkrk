@@ -25,6 +25,9 @@ export default {
     changeBtnStatus(value){
       debugger
       this.isBtnDisabled = !value
+    },
+    changeInputValue(value){
+      this.textInput = value;
     }
   }
 }

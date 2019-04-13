@@ -1,7 +1,7 @@
 <template>
   <div>
     <label>{{label}}</label>
-    <input type="text" v-on="listeners" :value="textInput">
+    <input type="text" v-on="listeners" @input="custom" v-bind="$attrs">
   </div>
 </template>
 <script>
@@ -12,9 +12,6 @@ export default {
     label: {
       type: String,
       default: "Default label"
-    },
-    textInput: {
-      type: String
     }
   },
   computed: {
@@ -24,8 +21,8 @@ export default {
     },
   },
   methods:{
-    changeInputValue(){
-      this.$emit('changeInputValue', event.target.value);
+    custom(){
+      this.$emit('input', event.target.value);
     }
   }
 };
