@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <base-button disabled :btn-name="'loading'"></base-button>
+    <base-button disabled :btn-name="'loading'">
+      <span>NAME</span>
+    </base-button>
     <base-input v-model="textInput"></base-input>
     <h1>{{textInput}}</h1>
   </div>

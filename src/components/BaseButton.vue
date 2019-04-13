@@ -1,7 +1,7 @@
 <template>
 <div>
 <button  v-bind="$attrs">
-  {{btnName}}
+  <slot></slot>
 </button>
 </div>
 
